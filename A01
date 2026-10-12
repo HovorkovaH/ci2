@@ -1,0 +1,11 @@
+Commands used to clone the GitHub repository and push changes:
+1. Clone the GitHub repository using SSH
+git clone git@github.com:HovorkovaH/ci2.git
+2. Navigate to the local repository
+cd ci2
+3. Commit the changes with a meaningful message
+git commit -a -m "Update project files"
+4. Verify the latest commit
+git log -1 --oneline
+5. Push the changes to GitHub
+git push
