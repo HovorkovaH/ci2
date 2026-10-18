@@ -7,24 +7,27 @@ class Texter:
         self.filename = filename
 
     def run(self):
-        """Process the input text file."""
         try:
-            with open(self.filename, "r", encoding="utf-8") as file:
+            with open(self.filename, encoding="utf-8") as file:
                 text = file.read()
+        except OSError as error:
+            print(f"Error reading file: {error}")
+            return
 
-            print(text)
-
-        except FileNotFoundError:
-            print(f"Error: File '{self.filename}' was not found.")
+        print(f"Number of characters: {len(text)}")
+        print(
+            f"Number of capital letters: "
+            f"{sum(char.isupper() for char in text)}"
+        )
 
 
 def main():
     if len(sys.argv) < 2:
         print("Usage: python texter.py <filename>")
-        sys.exit(1)
+        print("Example: python texter.py test.txt")
+        return
 
-    texter = Texter(sys.argv[1])
-    texter.run()
+    Texter(sys.argv[1]).run()
 
 
 if __name__ == "__main__":
