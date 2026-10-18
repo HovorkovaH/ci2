@@ -1,5 +1,5 @@
 homework A02
-A02 – Text File Analysis
+A02 – Text File Analysis and overall guide
 
 create folder A02 and in it a file README.md
 create texter.py script which reads a text file and prints the total number of characters and the number of capital letters
@@ -22,7 +22,7 @@ dir
 Use the script
 python texter.py test.txt  
 
-The results were:
+The results were (I am number 3 on the list of students):
 Number of characters: 2692
 Number of capital letters: 50
 
