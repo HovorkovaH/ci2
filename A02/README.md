@@ -1,30 +1,34 @@
 homework A02
 A02 – Text File Analysis
-Description
 
-The texter.py script reads a text file and prints the total number of characters and the number of capital letters.
+create folder A02 and in it a file README.md
+create texter.py script which reads a text file and prints the total number of characters and the number of capital letters
+load texter.py into A02 folder
+create file with desired text and name it test.txt
 
-Requirements
-Python 3
-Git
-Clone the repository
+Clone the GitHub repository using SSH
+git clone git@github.com:HovorkovaH/ci2.git
 
-Open PowerShell and run:
-git clone https://github.com/HovorkovaH/ci2.git
+open in Virtual Studio Code and open new Terminal
+Navigate to the local repository
+cd desktop
+Clone the GitHub repository
+git clone git@github.com:HovorkovaH/ci2.git
+Navigate to desired folder A02
 cd ci2
 cd A02
+dir
 
-Run the script
+Use the script
+python texter.py test.txt  
 
-To process the test file, run:
+The results were:
+Number of characters: 2692
+Number of capital letters: 50
 
-python texter.py test.txt
+Verify the latest commit and preapre to push to GitHub again
+git commit -a -m "Update project files"
+git log -1 --oneline
+git push
 
-If no filename is provided, run:
-python texter.py
-
-
-The script prints instructions explaining how to use it.
-Implementation
-The Texter class processes the file in its run() method. It uses len() to count characters and isupper() to count capital letters.
-The script uses UTF-8 encoding and follows Python's PEP 8 naming and indentation conventions.
+Reload GitHub to show the changes
