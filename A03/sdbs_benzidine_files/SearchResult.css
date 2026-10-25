@@ -1,0 +1,178 @@
+﻿/****** 検索結果画面(構造式なし)の設定 ******/
+/* pタグの設定 */
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+/* 画面上下の線の設定 */
+hr {
+    display: block;
+    unicode-bidi: isolate;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+    margin-inline-start: 0.5em;
+    margin-inline-end: 0.5em;
+    overflow: hidden;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/*** 検索結果画面の上部のSummaryの設定 ***/
+/* タイトル「SDBS Search Results:」の設定 */
+.summary-title {
+    font-weight: bold;
+    Font-Size: 24px;
+    padding-left:0.5em;
+}
+/* 表示件数・総件数ラベル「1 - 20 out of 0 hits」の設定 */
+.summary-main {
+    font-size:16px;
+}
+/* ソート部の設定 */
+.summary-sort {
+    font-size: 14px;
+    padding-left: 1.5em;
+}
+/* pタグの設定 */
+.p-tytle {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+
+/* 検索結果画面の上部のラベル、出力項目のフォントサイズ設定 */
+.item-head {
+    Font-Size: 16px;
+    width: 100%;
+    min-width: 
+}
+/* 検索結果画面の設定 ******/
+.SearchError {
+    text-align: center;
+    font-weight: bold;
+    Font-Size: 20px;
+}
+.ReturnSearchInfo {
+    text-align: center;
+    Font-Size: 16px;
+}
+
+/*** 検索結果画面の表示項目の各種ラベル設定 ***/
+
+/* SDBS Noラベルの設定 */
+.sdbs-lbl {
+    width: 6.5em;
+    padding-left: 1em;
+}
+/* 分子式ラベルの設定 */
+.mol-form-lbl {
+    width: 10em;
+    padding-left: 0.5em;
+}
+/* 分子量ラベルの設定 */
+.mol-weight-lbl {
+    width: 9.5em;
+    padding-left: 0.8em;
+}
+/* MSラベル設定 */
+.ms-lbl {
+    width: 1em;
+    padding-left: 0.7em;
+}
+/* CNMラベル設定 */
+.cnm-lbl {
+    width: 1em;
+    padding-left: 1em;
+}
+/* HNMRラベル設定 */
+.hnmr-lbl {
+    width: 1em;
+    padding-left: 0.5em;
+}
+/* IRラベル設定 */
+.ir-lbl {
+    width: 1em;
+    padding-left: 1em;
+}
+/* Ramanラベル設定 */
+.raman-lbl {
+    width: 1em;
+    padding-left: 1em;
+}
+/* ESRラベル設定 */
+.esr-lbl {
+    width: 1em;
+    padding-left: 1em;
+}
+/* 化合物名称設定 */
+.comp-name {
+    text-align: left;
+    padding-left: 1.5em;
+}
+
+/*** 検索結果に応じた表示する値の各種設定 ***/
+
+/* SDBS Noの表示する値の設定 */
+.sdbsno-val {
+    text-align:right;
+    padding-right:2.1em;
+}
+/* 分子式の表示する値の設定 */
+.form-val {
+    text-align: left;
+    padding-left: 1.6em;
+}
+/* 分子量の表示する値の設定 */
+.mol-weight-val {
+    text-align:right;
+    padding-right:2em;
+}
+/* MSの表示する値の設定 */
+.ms-val {
+    text-align: center;
+    padding-left: 0.7em;
+}
+/* CNMRの表示する値の設定 */
+.cnmr-val {
+    text-align: center;
+    padding-left: 1em;
+}
+/* HNMRの表示する値の設定 */
+.hnmr-val {
+    text-align: center;
+    padding-left: 0.5em;
+}
+/* IRの表示する値の設定 */
+.ir-val {
+    text-align: center;
+    padding-left: 1em;
+}
+/* Ramanの表示する値の設定 */
+.rm-val {
+    text-align: center;
+    padding-left: 1em;
+}
+/* ESRの表示する値の設定 */
+.esr-val {
+    text-align: center;
+    padding-left: 1em;
+}
+.re-result{
+    margin:0px;
+}
+.site-url {
+    margin:0px;
+}
+
+/*** フッター部の検索画面に戻るリンクと産総研のリンクの位置調整 ***/
+.result-pagination {
+    padding-right:0.5em;
+}

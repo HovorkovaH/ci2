@@ -1,0 +1,16 @@
+﻿/* ページ遷移リンク。折り返さない */
+.pagination {
+    padding-left: 110px;
+    white-space: nowrap;
+    margin:auto;
+}
+/* ページネーションリンク部分。文字の大きさ・位置調整設定 */
+.pagination-link {
+    font-size:16px;
+    padding-right:0.1em;
+}
+/* 現在選択中のページ。大きめの太文字 */
+.pagination-current {
+    font-size: large;
+    font-weight: bold;
+}

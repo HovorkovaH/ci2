@@ -1,0 +1,141 @@
+﻿/*
+    プロジェクト内で共通で使用するものはここに記載してください。
+    ページ固有のものはダメ！
+*/
+
+/* コントロール非表示 **************************/
+.NonDisplay {
+    display: none;
+}
+
+/* ヘッダー、ボディ、フッターを含む領域設定 ******/
+.ContentArea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    padding: 85px 0px 20px 0px;
+}
+
+/* ヘッダー、ボディのみの領域設定 ******/
+.HeaderOnlyContentArea {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    padding: 85px 0px 0px 0px;
+}
+
+/* ヘッダー関連 ********************************/
+.HeaderArea {
+    background-color: #003d00;
+    height: 85px;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    z-index:10;
+}
+
+    .HeaderArea .TableArea {
+        position: absolute;
+        top: 20%;
+        left: 25%;
+    }
+
+        .HeaderArea .TableArea table {
+            margin: auto;
+        }
+
+            .HeaderArea .TableArea table tbody tr td:first-child {
+                text-align: left;
+                padding-right: 15px;
+                line-height: 1.2;
+            }
+
+    .HeaderArea input {
+        font-size: 13.3333px;
+    }
+
+    .HeaderArea .TableArea img {
+        margin-top: -16px;
+    }
+
+/* フッター関連 ********************************/
+.FooterArea {
+    text-align: right;
+    background-color: #d8ffd8;
+    font-size: 16px;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
+
+    .FooterArea hr {
+        margin: unset;
+        border-style: inset;
+    }
+
+/* ボディ関連 ********************************/
+.BodyArea {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #d8ffd8;
+    z-index:1;
+}
+
+/* サイド領域付きマスターページ関連 */
+.VariableBodyContainer {
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh - 85px);
+}
+
+.SideBody {
+    overflow: auto;
+    flex-basis: 15%;
+}
+
+.Splitter {
+    flex-basis: 4px;
+    cursor: col-resize;
+    background-color: lightgray;
+}
+
+.MainBody {
+    overflow: auto;
+    flex-grow: 1;
+}
+
+/* 検索結果用のフッターエリア調整 */
+.ResultList-Content.ContentArea {
+    min-height: 100vh;
+    background-color: #d8ffd8;
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    margin: 0px;
+    padding-bottom: 0px;
+    height: initial;
+}
+
+.ResultList-Content .BodyArea {
+    height: initial;
+}
+
+.ResultList-Content .FooterArea {
+    text-align: right;
+    background-color: #d8ffd8;
+    font-size: 16px;
+    position: initial;
+    width: 100%;
+    bottom: unset;
+}
+
+.pagination {
+    padding-left: 110px;
+    text-align: left;
+    list-style: none;
+}
