@@ -1,1 +1,147 @@
+# A05 CDXML to PNG Converter
 
+`cdx2png.py` processes ChemDraw CDXML files, creates PNG images, and reports the files with the lowest and largest calculated molecular weights.
+
+## Requirements
+
+- Git
+- Python 3 with pip
+- Windows PowerShell
+- Open Babel with CDXML input and PNG output support
+
+The instructions below use PowerShell. Copy only the commands, not the
+`PS C:\Users\...>` prompt.
+
+## Clone the repository
+
+Replace `YOUR-USERNAME` and `YOUR-REPOSITORY` with the correct GitHub details:
+
+```powershell
+git clone [https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git](https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git)
+cd YOUR-REPOSITORY
+```
+
+If the script is stored in the `A05` subdirectory, enter it:
+
+```powershell
+cd A05
+```
+
+Run subsequent commands from the directory containing `cdx2png.py`.
+
+## Create a virtual environment
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+```
+
+If PowerShell blocks activation, you can use the environment directly without
+changing your execution policy:
+
+```powershell
+.\.venv\Scripts\python.exe -m pip --version
+```
+
+When activation is unavailable, replace `python` in subsequent commands with
+`.\.venv\Scripts\python.exe`.
+
+## Install Python packages
+
+Upgrade pip and install Open Babel:
+
+```powershell
+python -m pip install --upgrade pip
+python -m pip install openbabel
+```
+
+Use one Open Babel Python distribution in this environment; do not repeat the
+earlier installation of both `openbabel` and `openbabel-wheel`.
+
+If the repository includes a `requirements.txt` file, install its dependencies:
+
+```powershell
+python -m pip install -r requirements.txt
+```
+
+The complete dependency list must match the imports in `cdx2png.py`.
+
+## Verify Open Babel
+
+Check the Python interpreter and imported Open Babel package:
+
+```powershell
+python -c "import sys; from openbabel import openbabel as ob; print(sys.executable); print(ob.__file__); print(ob.OBReleaseVersion())"
+```
+
+Check whether the Python bindings support the required formats:
+
+```powershell
+python -c "from openbabel import openbabel as ob; c = ob.OBConversion(); print('CDXML input:', c.SetInFormat('cdxml')); print('PNG output:', c.SetOutFormat('png'))"
+```
+
+Both format checks should return `True` if the script uses Open Babel's Python
+bindings for both reading CDXML and writing PNG.
+
+If the script calls the `obabel` executable, also check:
+
+```powershell
+Get-Command obabel -All
+obabel -V
+obabel -L formats | Select-String -Pattern "cdxml|png"
+```
+
+The executable must list both `cdxml` and `png`. If `obabel` is not found, install
+a Windows Open Babel binary distribution and ensure its installation directory
+is on `PATH`, then reopen PowerShell.
+
+Important: the `obabel` executable and Python bindings can use different
+Open Babel installations. A successful command-line format check does not
+prove that the Python bindings support the same formats.
+
+## Run the script
+
+Convert one file:
+
+```powershell
+python cdx2png.py rx00005.cdxml
+```
+
+Process all CDXML files in the current directory:
+
+```powershell
+python cdx2png.py "*.cdxml"
+```
+
+The wildcard command assumes the script expands file patterns internally,
+as demonstrated in the supplied execution log.
+
+## Example output
+
+The supplied successful run produced:
+
+```text
+Created: rx00005.png
+Created: rx00153.png
+Created: rx00249.png
+Created: rx00252.png
+Created: rx00253.png
+Created: rx00254.png
+Created: rx00256.png
+Created: rx00259.png
+Created: rx00260.png
+
+Lowest Mr: rx00153.cdxml (Mr = 87.4845)
+Largest Mr: rx00259.cdxml (Mr = 336.2996)
+```
+
+Results depend on the input files and the version of the script.
+
+## Push to git 
+
+Verify the latest commit and preapre to push to GitHub again
+```git commit -a -m "Update project files"```
+```git log -1 --oneline```
+```git push```
+
+Reload GitHub to show the changes
