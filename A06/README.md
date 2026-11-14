@@ -31,6 +31,12 @@ python graph.py
 
 The script writes `graph.png` in the current directory. Optional CSV and output
 
+paths can be supplied:
+
+```powershell
+python graph.py graph.csv graph.png
+```
+
 ## Push to git 
 
 Verify the latest commit and preapre to push to GitHub again
@@ -39,8 +45,3 @@ Verify the latest commit and preapre to push to GitHub again
 ```git push```
 
 Reload GitHub to show the changes
-paths can be supplied:
-
-```powershell
-python graph.py graph.csv graph.png
-```
