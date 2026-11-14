@@ -30,6 +30,15 @@ python graph.py
 ```
 
 The script writes `graph.png` in the current directory. Optional CSV and output
+
+## Push to git 
+
+Verify the latest commit and preapre to push to GitHub again
+```git commit -a -m "Update project files"```
+```git log -1 --oneline```
+```git push```
+
+Reload GitHub to show the changes
 paths can be supplied:
 
 ```powershell
