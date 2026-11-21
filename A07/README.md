@@ -56,3 +56,12 @@ rerun the render command.
 
 The generated POV-Ray include is based on Open Babel's `babel_povray3.inc`,
 distributed under GPL-2.0; its license is included in `COPYING`.
+
+## Push to git 
+
+Verify the latest commit and preapre to push to GitHub again
+```git commit -a -m "Update project files"```
+```git log -1 --oneline```
+```git push```
+
+Reload GitHub to show the changes
